@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <Header />
       <Meme />
-      <h1> App is working !!</h1>
     </div>
   )
 }

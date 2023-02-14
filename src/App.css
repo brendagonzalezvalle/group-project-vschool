@@ -28,3 +28,29 @@
 .weader > h3 {
     font-size: 2vw;
 }
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 225, 255, 0.761);
+}
+
+.randomize {
+    grid-column: 1/-1;
+}
+
+.meme {
+    display: flex;
+    justify-content: center;
+}
+
+.memeImg {
+    max-width: 100%;
+    justify-content: center;
+}
