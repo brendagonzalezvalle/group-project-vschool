@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+}
+
+.App{
+    height: 90vh;
+    width: 90vw;
+    border: 5px solid rgb(74, 158, 255);
+    box-shadow: vh 1vw rgb(74, 74, 74);
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 225, 255, 0.761);
+    flex-direction: column;
+    padding: 5vw;
+    background-color: rgb(255, 255, 255);
+    font-size: 3vw;
+    -webkit-text-stroke: 3px black;
+    border: .5vw solid black;
+}
+
+.weader > h3 {
+    font-size: 2vw;
+}

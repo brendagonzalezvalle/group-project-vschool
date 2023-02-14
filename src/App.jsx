@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 
 import './App.css'
+import './index.css'
 import Header from './Header'
 import Meme from './Meme'
 
