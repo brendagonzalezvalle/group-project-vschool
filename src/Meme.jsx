@@ -53,11 +53,13 @@ export default function Meme() {
                 onChange={handleChange}
                 />
 
-                <button className='randomize' onClick={randomMeme}>randomize</button>
+                <button className='randomize' onClick={randomMeme}>refresh meme page</button>
                 
             </div>
             <div className='meme'>
                 <img className='memeImg' src={meme.randomImage} />
+                <h2 className='meme-text top'>{meme.topText}</h2>
+                <h2 className='meme-text bottom'>{meme.bottomText}</h2>
             </div>
         </main>
     )
