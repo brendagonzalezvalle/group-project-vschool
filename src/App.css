@@ -48,12 +48,13 @@
 .meme {
     display: flex;
     justify-content: center;
+    height: 40vh;
 }
 
 .memeImg {
     max-width: 100%;
     border-radius: 3px;
-    max-height: 40vh;
+    height: 40vh;
     justify-content: center;
 }
 
