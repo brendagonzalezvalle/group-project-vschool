@@ -1,4 +1,7 @@
 import React from 'react'
+import List from './List'
+
+
 
 export default function Meme() {
 
@@ -8,6 +11,8 @@ export default function Meme() {
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
     const [allMemes, setAllMemes] = React.useState([])
+
+    const [listMemes, setListMemes] = React.useState([])
     
     React.useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
@@ -34,6 +39,29 @@ export default function Meme() {
     }
 
     console.log(meme.topText)
+
+    function addToList (){
+        console.log("add to list was clicked!!")
+        setListMemes(prev =>  {
+            
+        return [...prev, meme]
+    })
+    console.log(listMemes)
+
+    }
+
+    const mapOverList = listMemes.map(function(items){
+        return <List 
+            topText={items.topText}
+            bottomText={items.bottomText}
+            randomImage={items.randomImage}
+
+        />
+       
+    })
+    console.log(mapOverList)
+
+
     return (
         <main>
             <div className='form'>
@@ -61,6 +89,20 @@ export default function Meme() {
                 <h2 className='meme-text top'>{meme.topText}</h2>
                 <h2 className='meme-text bottom'>{meme.bottomText}</h2>
             </div>
+
+
+            <div className='list--button--container'>
+                <button onClick={addToList}className="list--button">Add To List!</button>
+
+            </div>
+
+            <div className="list--container">
+                {mapOverList}
+            </div>
+            
         </main>
+
+        
+        
     )
 }
