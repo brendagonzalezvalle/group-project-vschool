@@ -43,19 +43,17 @@ export default function Meme() {
     function addToList (){
         console.log("add to list was clicked!!")
         setListMemes(prev =>  {
-            
         return [...prev, meme]
     })
     console.log(listMemes)
-
     }
 
-    const mapOverList = listMemes.map(function(items){
+    const mapOverList = listMemes.map(function(items, index){
         return <List 
+            key = {index}
             topText={items.topText}
             bottomText={items.bottomText}
             randomImage={items.randomImage}
-
         />
        
     })
@@ -82,18 +80,18 @@ export default function Meme() {
                 />
 
                 <button className='randomize' onClick={randomMeme}>refresh meme page</button>
-                
-            </div>
-            <div className='meme'>
-                <img className='memeImg' src={meme.randomImage} />
-                <h2 className='meme-text top'>{meme.topText}</h2>
-                <h2 className='meme-text bottom'>{meme.bottomText}</h2>
             </div>
 
+            <div className='meme'>
+                <div className='meme-container'>
+                    <img className='memeImg' src={meme.randomImage} />
+                    <h2 className='meme-text top'>{meme.topText}</h2>
+                    <h2 className='meme-text bottom'>{meme.bottomText}</h2>
+                </div>
+            </div>
 
             <div className='list--button--container'>
                 <button onClick={addToList}className="list--button">Add To List!</button>
-
             </div>
 
             <div className="list--container">
@@ -101,8 +99,5 @@ export default function Meme() {
             </div>
             
         </main>
-
-        
-        
     )
 }
