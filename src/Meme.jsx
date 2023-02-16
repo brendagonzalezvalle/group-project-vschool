@@ -64,19 +64,19 @@ export default function Meme() {
         <main>
             <div className='form'>
                 <input type='text' 
-                placeholder='Top text' 
-                name='topText' 
-                className='form-input'
-                value={meme.topText}
-                onChange={handleChange}
+                    placeholder='Top text' 
+                    name='topText' 
+                    className='form-input'
+                    value={meme.topText}
+                    onChange={handleChange}
                 />
 
                 <input type='text' 
-                placeholder='Bottom text' 
-                name='bottomText' 
-                className='form-input'
-                value={meme.bottomText}
-                onChange={handleChange}
+                    placeholder='Bottom text' 
+                    name='bottomText' 
+                    className='form-input'
+                    value={meme.bottomText}
+                    onChange={handleChange}
                 />
 
                 <button className='randomize' onClick={randomMeme}>refresh meme page</button>
