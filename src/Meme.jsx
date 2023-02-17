@@ -61,23 +61,25 @@ export default function Meme() {
 
 
     return (
-        <main>
+        <main className='main'>
             <div className='form'>
-                <input type='text' 
-                    placeholder='Top text' 
-                    name='topText' 
-                    className='form-input'
-                    value={meme.topText}
-                    onChange={handleChange}
-                />
+                <div className='input-container'>
+                    <input type='text' 
+                        placeholder='Top text' 
+                        name='topText' 
+                        className='form-input'
+                        value={meme.topText}
+                        onChange={handleChange}
+                    />
 
-                <input type='text' 
-                    placeholder='Bottom text' 
-                    name='bottomText' 
-                    className='form-input'
-                    value={meme.bottomText}
-                    onChange={handleChange}
-                />
+                    <input type='text' 
+                        placeholder='Bottom text' 
+                        name='bottomText' 
+                        className='form-input'
+                        value={meme.bottomText}
+                        onChange={handleChange}
+                    />
+                </div>
 
                 <button className='randomize' onClick={randomMeme}>refresh meme page</button>
             </div>
@@ -89,10 +91,8 @@ export default function Meme() {
                     <h2 className='meme-text bottom'>{meme.bottomText}</h2>
                 </div>
             </div>
-
-            <div className='list--button--container'>
-                <button onClick={addToList}className="list--button">Add To List!</button>
-            </div>
+            
+            <button onClick={addToList}className="addToList">Add To List!</button>
 
             <div className="list--container">
                 {mapOverList}

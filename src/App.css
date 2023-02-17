@@ -5,7 +5,7 @@
 }
 
 .App{
-    height: 400vh;
+    height: auto;
     width: 90vw;
     border: 5px solid rgb(74, 158, 255);
     box-shadow: vh 1vw rgb(74, 74, 74);
@@ -25,76 +25,81 @@
     border: .5vw solid black;
 }
 
-.weader > h3 {
+.header > h3 {
     font-size: 2vw;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .form-input {
-    margin: 10px;
+    margin: 5vh 5vw;
     margin-bottom: 10px;
     border: 1px solid rgba(0, 225, 255, 0.761);
+    font-size: 2vw;
+    text-align: center;
 }
 
-.randomize {
-    grid-column: 1/-1;
+button {
+    margin: 1vh 10vw;
+    font-size: 2vw;
+    width: 80%;
 }
 
 .list--container {
-    display: grid;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.list--button {
-    grid-column: 1/-1;
-    width: 100%;
-    left: 50%;
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3vh 3vw
+}
+
+.addToList {
+    width: 50vw;
     margin-bottom: 30px;
-
-}
-
-.list--topText {
-    text-transform: uppercase;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    color: rgba(0, 225, 255, 0.761);
-    -webkit-text-stroke: 0.5px black;
-    transform: translateX(-50%);
-    margin: 15px 0;
-    padding: 0 5px;
-}
-
-.list--bottomText {
-    text-transform: uppercase;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    color: rgba(0, 225, 255, 0.761);
-    -webkit-text-stroke: 0.5px black;
-    transform: translateX(-50%);
-    margin: 15px 0;
-    padding: 0 5px;
-    bottom: 0;
-}
-
-.list-objects {
-    position: relative;
 }
 
 .meme {
     display: flex;
     justify-content: center;
-    height: 50%;
+    align-items: center;
+    height: auto;
+
+}
+
+.meme-container {
+    position: relative;
 }
 
 .memeImg {
     max-width: 100%;
+    max-height: 100%;
     border-radius: 3px;
     justify-content: center;
     object-fit: cover;
@@ -105,21 +110,39 @@
     text-align: center;
     position: absolute;
     left: 50%;
-    color: rgba(0, 225, 255, 0.761);
-    -webkit-text-stroke: .5px black;
+    color: white;
+    -webkit-text-stroke: 3px black;
     transform: translateX(-50%);
     margin: 15px 0;
     padding: 0 5px;
-}
-
-.meme-container {
-    position: relative;
+    font-size: 5vw;
 }
 
 .bottom {
-    bottom: 0;
+    bottom: 5%;
 }
 
 .top {
-    top: 0;
+    top: 5%;
+}
+
+.list-objects {
+    position: relative;
+}
+
+.list-objects > h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-size: 5vw;
+}
+
+.list--input {
+    font-size: 2vw;
 }

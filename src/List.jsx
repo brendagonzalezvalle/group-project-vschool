@@ -35,25 +35,27 @@ export default function List(props){
     }
 
     return (
-        <div className="list--container">
+        <div className="list">
             {isShown &&
                 <Fragment>
                     <div className="list-objects">
-                        <h2 className="list--topText">{listItem.topText}</h2>
                         <img className='memeImg'  src={listItem.randomImage} />
-                        <h2 className="list--bottomText" >{listItem.bottomText}</h2>
+                        <h2 className="top">{listItem.topText}</h2>
+                        <h2 className="bottom" >{listItem.bottomText}</h2>
                     </div>
                     {
                         showEdit &&
                         <Fragment>
                             <input
                                 name='topText'
+                                className='list--input'
                                 onChange={handleChange}
                                 value={listItem.topText}
                             >
                             </input>
                             <input
                                 name='bottomText'
+                                className='list--input'
                                 onChange={handleChange}
                                 value={listItem.bottomText}
                             >
