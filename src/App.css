@@ -7,7 +7,7 @@
 .App{
     height: auto;
     width: 90vw;
-    border: 5px solid rgb(74, 158, 255);
+    border: 5px solid rgb(58, 104, 156);
     box-shadow: vh 1vw rgb(74, 74, 74);
     background-color: white;
 }
@@ -16,12 +16,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgba(0, 225, 255, 0.761);
+    color: rgb(2, 255, 242);
     flex-direction: column;
     padding: 5vw;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(15, 78, 86, 0.825);
     font-size: 3vw;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
     border: .5vw solid black;
 }
 
@@ -40,7 +40,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
     
 }
 
@@ -53,18 +53,19 @@
 
 .form-input {
     margin: 5vh 5vw;
-    margin-bottom: 10px;
-    border: 1px solid rgba(0, 225, 255, 0.761);
+    border: 1px solid rgba(0, 0, 0, 0.458);
     font-size: 2vw;
     text-align: center;
+    
 }
 
 button {
-    margin: 1vh 10vw;
+    margin: 0 10vw;
     font-size: 2vw;
     width: 80%;
     font-family: fantasy;
     box-shadow: 5px 6px;
+    padding-top: 2vh
 }
 
 .list--container {
@@ -98,6 +99,7 @@ button {
 
 .meme-container {
     position: relative;
+    margin-bottom: 3vh;
 }
 
 .memeImg {
@@ -106,6 +108,7 @@ button {
     border-radius: 3px;
     justify-content: center;
     object-fit: cover;
+    
 }
 
 .meme-text {
