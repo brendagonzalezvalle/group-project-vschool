@@ -81,7 +81,7 @@ export default function Meme() {
                     />
                 </div>
 
-                <button className='randomize' onClick={randomMeme}>refresh meme page</button>
+                <button className='randomize' onClick={randomMeme}>Refresh Meme Page! </button>
             </div>
 
             <div className='meme'>
